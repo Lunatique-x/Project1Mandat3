@@ -1,3 +1,5 @@
+//Le code est en anglais parce-qu'on avait initialement créé le site en anglais. Seuls les charactères visibles dans le site est en français.
+
 const passwordInput = document.getElementById('password');
 const createButton = document.getElementById('createButton');
 const feedbackEl = document.getElementById('passwordFeedback');
@@ -11,9 +13,9 @@ function getMissingPasswordRequirements(pw) {
   const uppercaseRegex = /[A-Z]/; //Liste des majuscules
 
   //Si requirements is not good, affiche requirement non-respecté
-  if (!specialCharRegex.test(pw)) missing.push('At least one special character');
-  if (!uppercaseRegex.test(pw)) missing.push('At least one uppercase letter');
-  if ((pw || '').length < 8) missing.push('Minimum 8 characters');
+  if (!specialCharRegex.test(pw)) missing.push('Au moins un charactère spécial');
+  if (!uppercaseRegex.test(pw)) missing.push('Au moins une lettre majuscule');
+  if ((pw || '').length < 8) missing.push('Au minimum 8 charactères');
 
   return missing;
 }
@@ -24,7 +26,7 @@ function renderPasswordFeedback(show) {
   const missing = getMissingPasswordRequirements(pw);
 
   if (missing.length === 0) { //Si la liste de missing requirements est vide = password complète!
-    feedbackEl.textContent = 'Password meets all of the requirements!';
+    feedbackEl.textContent = 'Mot de passe est correct!';
     feedbackEl.classList.remove('is-danger');
     feedbackEl.classList.add('is-success');
     feedbackEl.style.display = show ? 'block' : 'none';
@@ -32,7 +34,7 @@ function renderPasswordFeedback(show) {
     feedbackEl.classList.remove('is-success');
     feedbackEl.classList.add('is-danger');
     feedbackEl.innerHTML =
-      '<strong>Password requirements:</strong><ul style="margin:0;padding-left:1.25em;">' +
+      '<strong>Nécessités du mot de passe:</strong><ul style="margin:0;padding-left:1.25em;">' +
       missing.map(m => `<li>${m}</li>`).join('') +
       '</ul>';
     feedbackEl.style.display = show ? 'block' : 'none';
