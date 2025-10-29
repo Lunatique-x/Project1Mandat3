@@ -1,0 +1,21 @@
+.container1 {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.image1 {
+    width: 500px;
+    border-radius: 8px;
+}
+
+.textpresentation {
+    background-color: rgba(31, 31, 31, 0.459);
+    border-radius: 8px;
+    padding: 10px;
+    height: 100px;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.6);
+    align-self: center;
+}
