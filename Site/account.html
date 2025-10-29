@@ -91,16 +91,17 @@
 
                 <div class="field">
                     <div class="control has-icons-left">
-                        <input class="input" type="password" placeholder="Password">
+                        <input class="input" type="password" placeholder="Password" id="password">
                         <span class="icon is-small is-left">
                             <i class="fas fa-lock"></i>
                         </span>
                     </div>
+                    <p id="passwordFeedback" class="help" aria-live="polite" style="display:none;"></p>
                 </div>
 
                 <div class="field">
                     <div class="control">
-                    <button class="button is-link">Create</button>
+                    <button class="button is-link" id="createButton">Create</button>
                     </div>
                 </div>
                 </form>
@@ -108,4 +109,6 @@
         </div>
 
     </body>
+
+<script src="req.js" defer></script>
 </html>
