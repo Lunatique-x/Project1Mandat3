@@ -11,12 +11,68 @@
     <link rel="stylesheet" href="style.css">
 </head>
     <body>
+
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" alt="Logo">
+                </a>
+            </div>
+
+            <div class="navbar-menu">
+                <!-- cote gauche  -->
+                <div class="navbar-start">
+                    <a class="navbar-item" href="presentation.html">
+                        Présentation
+                    </a>
+                    <a class="navbar-item" href="#">
+                        Shop
+                    </a>
+                    <a class="navbar-item" href="galerie.html" >
+                        Galerie
+                    </a>
+                </div>
+
+                <!-- centre  -->
+                <div class="navbar-item is-flex-grow-1">
+                    <div class="field has-addons" style="width: 100%;">
+                        <div class="control is-expanded">
+                            <input class="input" type="text" placeholder="Search...">
+                        </div>
+                        <div class="control">
+                            <button class="button is-info">
+                                <span class="icon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  cote a droite  -->
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-info is-outlined is-hovered" href="login.html">
+                                <strong>Sign up</strong>
+                            </a>
+                            <a class="button is-white">
+                                <span class="icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
         <div class="container1">
             <div class="">
                 <img class="image1" 
                     src="https://cdn.oneesports.gg/cdn-data/2024/03/How_old_is_Stark_Frieren_A_Journeys_End_Anime.jpg" alt="">
             </div>
-            <div class="textpresentation">
+            <div class="textpresentation is-left">
                 Je suis Kerian Delourmel étudiant en Informatique au collège maisonneuve
                 <br>
                 Github : <a href="https://github.com/Lunatique-x">Lunatique-x</a>
@@ -39,6 +95,7 @@
             </div>
         </div>
 
+        
         <div class="container1">
             <div class="">
                 <img class="image1" 
