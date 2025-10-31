@@ -71,3 +71,19 @@ if (form) { //N'execute pas la commande du bouton si les password ne sont pas ba
     interceptIfInvalid(event);
   });
 }
+
+
+
+
+// Function to handle image clicks and display descriptions
+function handleImageClick(event) {
+  const description = event.target.getAttribute('data-description');
+  if (description) {
+    alert(description);
+  }
+}
+
+// Attach event listeners to all images with data-description
+document.querySelectorAll('img[data-description]').forEach(img => {
+  img.addEventListener('click', handleImageClick);
+});
