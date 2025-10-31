@@ -70,8 +70,9 @@ body{
 
 /* Gallery grid */
 .wrap {color: white;font-size: 35px;}
+.site-main{background-color: #090715;}
 .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap);margin:1.5rem 0;padding:0;list-style:none;}
-.gallery-section.wrap{background-color: #071023;}
+.gallery-section.wrap{background-color: #090715;}
 .card{background:linear-gradient(180deg,rgba(0, 0, 0, 0.01),rgba(0, 0, 0, 0.01));padding:0;border-radius:var(--radius);overflow:hidden;box-shadow:0 8px 30px rgba(0, 0, 0, 0.1);display:flex;flex-direction:column;}
 .card img{display:block;width:100%;height:auto;object-fit:cover;position:relative;transition:transform .35s ease,filter .35s ease}
 .card .thumb-btn{display:block;border:0;background:none;padding:0;cursor:pointer;width:80%}
