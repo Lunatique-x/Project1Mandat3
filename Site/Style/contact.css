@@ -1,0 +1,117 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+/* conteneur principal */
+.chat-bubbles {
+  display: flex;
+  align-items: flex-start; /* aligne les bulles et le form en haut */
+  justify-content: space-between; /* espace entre chaque bloc */
+  gap: 2rem;
+}
+
+/* images à gauche et à droite */
+.bubble-left img,
+.bubble-right img {
+  width: 220px;
+  height: auto;
+  border-radius: 30px;
+  border: 3px solid #00d1b2; /* couleur turquoise Bulma */
+  box-shadow: 0 0 15px rgba(0, 209, 178, 0.6);
+}
+
+/* bulle gauche */
+.bubble-left {
+  position: relative;
+}
+
+/* bulle droite */
+.bubble-right {
+  position: relative;
+  align-self: flex-start;
+}
+
+/* style du formulaire */
+form {
+  flex: 1;
+  padding: 2rem;
+  border-radius: 20px;
+  background: rgba(0, 209, 178, 0.2);
+  backdrop-filter: blur(8px);
+  border: 2px solid #00d1b2;
+  box-shadow: 0 0 15px #00d1b2;
+  animation: neonPulse 2s infinite alternate;
+}
+
+@keyframes neonPulse {
+  0% { box-shadow: 0 0 10px #00d1b2, 0 0 20px #00d1b2; }
+  100% { box-shadow: 0 0 25px #00d1b2, 0 0 50px #00d1b2; }
+}
+
+/* tige / petite pointe de bulle */
+.bubble-left::after,
+.bubble-right::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+}
+
+/* tige de la bulle gauche */
+.bubble-left::after {
+  left: -30px;
+  top: 40px;
+  border-right-color: #00d1b2;
+}
+
+/* tige de la bulle droite */
+.bubble-right::after {
+  right: -30px;
+  top: 40px;
+  border-left-color: #00d1b2;
+}
+
+.bubble-right img {
+  filter: brightness(125%) contrast(100%);
+  background-color: white;
+  border-radius: 30px;
+  padding: 5px;
+}
+
+
+
+.social-icons a {
+  margin: 0 10px;
+  color: #00d1b2;
+  font-size: 28px;
+  transition: 0.3s;
+}
+.social-icons a:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+@keyframes neonPulse {
+  0% {
+    text-shadow: 0 0 5px #00d1b2, 0 0 10px #00d1b2;
+  }
+  50% {
+    text-shadow: 0 0 15px #00d1b2, 0 0 30px #00d1b2;
+  }
+  100% {
+    text-shadow: 0 0 5px #00d1b2, 0 0 10px #00d1b2;
+  }
+}
+
+.footer a {
+  color: #00d1b2;
+  animation: neonPulse 1.5s infinite;
+   margin: 0 10px;
+}
+
+
+footer span.has-text-white {
+    font-size: 14px;
+}
