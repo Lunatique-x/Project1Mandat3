@@ -5,6 +5,17 @@
     gap: 30px;
     margin: auto;
     margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.096);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.is-right {
+    justify-content: end;
+}
+
+.is-left {
+    justify-content: start;
 }
 
 .image1 {
@@ -20,3 +31,4 @@
     box-shadow: 4px 4px 10px rgba(0,0,0,0.6);
     align-self: center;
 }
+
