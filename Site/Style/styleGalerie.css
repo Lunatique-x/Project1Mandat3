@@ -67,34 +67,53 @@ body{
 .hero h1{font-family:'Playfair Display',serif;font-size:2.25rem;margin:0 0 .25rem}
 .lead{color:var(--muted);margin:0}
 
-/* Accessibility helper */
+
 .visually-hidden{position:absolute!important;height:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap;width:1px;border:0;padding:0;margin:-1px}
 
-/* Gallery grid */
-.wrap {color: white;font-size: 35px;}
-.site-main{background-color: #090715;}
-.gallery-grid{display:grid;grid-template-columns:repeat(3,2fr);gap:var(--gap);margin:1.5rem 0;padding:0;list-style:none;}
-.gallery-section.wrap{background-color: #090715;}
-.card{background:linear-gradient(180deg,rgba(50, 48, 48, 0.79),rgba(0, 0, 0, 0.01));padding:0;border-radius:var(--radius);overflow:hidden;box-shadow:0 8px 30px rgba(0, 0, 0, 0.1);display:flex;flex-direction:column;}
-.card img{display:block;width: 500px;;height:200px;object-fit:cover;position:relative;transition:transform .35s ease,filter .35s ease;}
-.card .thumb-btn{display:block;border:0;background:none;padding:0;cursor:pointer;width:80%}
-.card figcaption{padding:.6rem .75rem;color:var(--muted);font-size: 20px;}
-.card:hover img,.card:focus-within img{transform:scale(1.03);filter:brightness(1.03)}
-.site-footer{padding:2rem 0;text-align:center;color:white;font-size:20px;background-color: #02021d;}
+/* la grille d ela gallerie */ 
+.wrap { 
+    color: white;font-size: 35px; 
+}
+.site-main{ 
+    background-color: #090715;}
+.gallery-grid{ 
+    display:grid;grid-template-columns:repeat(3,2fr);gap:var(--gap);margin:1.5rem 0;padding:0;list-style:none;}
+.gallery-section.wrap{ 
+    background-color: #090715;}
+.card{ 
+    background:linear-gradient(180deg,rgba(50, 48, 48, 0.79),rgba(0, 0, 0, 0.01));padding:0;border-radius:var(--radius);overflow:hidden;box-shadow:0 8px 30px rgba(0, 0, 0, 0.1);display:flex;flex-direction:column;}
+.card img{ 
+    display:block;width: 500px;;height:200px;object-fit:cover;position:relative;transition:transform .35s ease,filter .35s ease;}
+.card .thumb-btn{ 
+    display:block;border:0;background:none;padding:0;cursor:pointer;width:80%}
+.card figcaption{ 
+    padding:.6rem .75rem;color:var(--muted);font-size: 20px;}
+.card:hover img,.card:focus-within img{ 
+    transform:scale(1.03);filter:brightness(1.03)}
+.site-footer{ 
+    padding:2rem 0;text-align:center;color:white;font-size:20px;background-color: #02021d;}
 
-/* Modal */
-.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:1200}
+
+.modal{ 
+    position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:1200}
 .modal[aria-hidden="false"]{display:flex}
-.modal-backdrop{position:absolute;inset:0;background:rgba(2,6,23,0.7)}
-.modal-content{position:relative;max-width:90vw;max-height:90vh;padding:1rem;border-radius:12px;z-index:2;display:flex;align-items:center;justify-content:center}
-.modal-body{display:flex;align-items:center;gap:1rem}
-.modal-image-wrap{background:linear-gradient(180deg,#fff,#f7f7f7);padding:0.5rem;border-radius:8px}
-.modal-image-wrap img{max-width:90vw;max-height:80vh;display:block;border-radius:8px}
-.modal-close{position:absolute;right:8px;top:8px;background:rgba(0,0,0,0.6);border:0;color:white;padding:.45rem .6rem;border-radius:8px;cursor:pointer}
+.modal-backdrop{ 
+    position:absolute;inset:0;background:rgba(2,6,23,0.7)}
+.modal-content{ 
+    position:relative;max-width:90vw;max-height:90vh;padding:1rem;border-radius:12px;z-index:2;display:flex;align-items:center;justify-content:center}
+.modal-body{ 
+    display:flex;align-items:center;gap:1rem}
+.modal-image-wrap{ 
+    background:linear-gradient(180deg,#fff,#f7f7f7);padding:0.5rem;border-radius:8px}
+.modal-image-wrap img{ 
+    max-width:90vw;max-height:80vh;display:block;border-radius:8px}
+.modal-close{ 
+    position:absolute;right:8px;top:8px;background:rgba(0,0,0,0.6);border:0;color:white;padding:.45rem .6rem;border-radius:8px;cursor:pointer}
 .modal-prev,.modal-next{background:rgba(0,0,0,0.6);border:0;color:white;padding:.5rem .7rem;border-radius:8px;cursor:pointer}
-.modal-caption{margin-top:.4rem;color:#111;font-family:'Inter';font-weight:600}
+.modal-caption{ 
+    margin-top:.4rem;color:#111;font-family:'Inter';font-weight:600}
 
-/* Focus styles */
+
 a:focus,button:focus{box-shadow:var(--focus);outline:none}
 
 /* Responsive */
