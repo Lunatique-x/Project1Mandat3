@@ -32,4 +32,6 @@
     box-shadow: 4px 4px 10px rgba(0,0,0,0.6);
     align-self: center;
 }
-
+.body{ 
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}

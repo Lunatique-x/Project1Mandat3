@@ -1,7 +1,8 @@
 
 body {
-  color: white;
-  
+  background-color: black;
+  color: white; 
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 }
 
 /* conteneur principal */

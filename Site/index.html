@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="Style/stylebulma1.css">
-    <link rel="stylesheet" href="Style/stylebody.css">
-
+    <link rel="stylesheet" href="Style/cards.css">
+    <link rel="stylesheet" href="Style/style.css">
 
 </head>
     <body>
@@ -88,81 +88,111 @@
             </div>
         </section>
 
-        <!-- oeuvre  mise en avant section -->
-        <section class="section featured-art has-background-black">
+        <!-- oeuvre mise en avant : grille simplifiée générée par JS -->
+        <section class="section featured-art">
             <div class="container">
-                <h2 class="title has-text-centered mb-6">oeuvre mise en avant</h2>
-                
-                <div class="columns is-multiline">
+                <h2 class="title has-text-centered mb-6">Oeuvres mises en avant</h2>
+
+                <!-- grille vide : remplie par le script ci-dessous -->
+                <div class="columns is-multiline" id="art-grid">
+                    <!-- Les cards seront insérées ici par JS -->
+                </div>
+            </div>
+
+            <script>
+                // Liste d'images et métadonnées (remplacer ou compléter selon besoin)
+                const artworks = [
+                    {img: 'images/20251029_1354_image.png', title: 'Piece 1354', artist: 'Artiste A', price: '1200$', genre: 'Digital Art'},
+                    {img: 'images/20251029_1354_image (1).png', title: 'Piece 1354 (2)', artist: 'Artiste B', price: '850$', genre: 'Mixed Media'},
+                    {img: 'images/20251029_1355_image.png', title: 'Piece 1355', artist: 'Artiste C', price: '950$', genre: 'Photography'},
+                    {img: 'images/20251029_1356_image.png', title: 'Piece 1356', artist: 'Artiste D', price: '150$', genre: 'Abstrait'},
+                    {img: 'images/20251029_1358_image.png', title: 'Piece 1358', artist: 'Artiste E', price: '400$', genre: 'Illustration'},
+                    {img: 'images/digital-art-style-illustration-fashion-designer.jpg', title: 'Fashion Illustration', artist: 'Designer X', price: '2000$', genre: 'Illustration'},
+                    {img: 'images/fantasy-eye-illustration.jpg', title: 'Fantasy Eye', artist: 'Artiste Y', price: '600$', genre: 'Fantasy'},
+                    {img: 'images/img1.jpg', title: 'Image 1', artist: 'Artiste 1', price: '300$', genre: 'Photo'}
                     
-                    <div class="column is-3">
-                        <div class="card art-card">
-                            <div class="card-image">
-                                <figure class="image">
-                                    <img src="20251029_1353_image.png" alt="Art Piece 1">
-                                </figure>
-                            </div>
-                            <div class="card-content">
-                                <p class="artist-name has-text-white">Artist1</p>
-                                <p class="price" >1200$</p>
-                                <p class="description">Contemporary digital illustration exploring fashion and identity</p>
-                                <p class="art-type">Digital Art</p>
-                            </div>
-                        </div>
-                    </div>
+                ];
 
-                    <!-- art 2 -->
-                    <div class="column is-3">
-                        <div class="card art-card">
-                            <div class="card-image">
-                                <figure class="image">
-                                    <img src="images/20251029_1354_image.png" alt="Art Piece 2">
-                                </figure>
-                            </div>
-                            <div class="card-content">
-                                <p class="artist-name has-text-white">Artiste2</p>
-                                <p class="price">850$</p>
-                                <p class="description">Surreal interpretation of human perception and vision</p>
-                                <p class="art-type">Mixed Media</p>
-                            </div>
-                        </div>
-                    </div>
+                const grid = document.getElementById('art-grid');
 
-                    <!-- art  3 -->
-                    <div class="column is-3">
-                        <div class="card art-card">
-                            <div class="card-image">
-                                <figure class="image">
-                                    <img src="images/20251029_1355_image.png" alt="Art Piece 3">
-                                </figure>
-                            </div>
-                            <div class="card-content">
-                                <p class="artist-name has-text-white">Artiste3</p>
-                                <p class="price">950$</p>
-                                <p class="description">Modern take on summer nostalgia and youth</p>
-                                <p class="art-type">Photography</p>
-                            </div>
-                        </div>
-                    </div>
+                function createCard(art) {
+                    const col = document.createElement('div');
+                    col.className = 'column is-3';
 
-                    <!-- art 4  -->
-                    <div class="column is-3">
-                        <div class="card art-card">
-                            <div class="card-image">
-                                <figure class="image">
-                                    <img src="images/20251029_1356_image.png" alt="Art Piece 4">
-                                </figure>
-                            </div>
-                            <div class="card-content">
-                                <p class="artist-name has-text-white">Artiste4</p>
-                                <p class="price">150$</p>
-                                <p class="description">Abstract exploration of form and color</p>
-                                <p class="art-type">Abstrait</p>
-                            </div>
+                    const card = document.createElement('div');
+                    card.className = 'card simple-art-card';
+
+                    const imgDiv = document.createElement('div');
+                    imgDiv.className = 'card-image';
+                    const figure = document.createElement('figure');
+                    figure.className = 'image is-4by3';
+                    const img = document.createElement('img');
+                    img.src = art.img;
+                    img.alt = art.title || '';
+                    figure.appendChild(img);
+                    imgDiv.appendChild(figure);
+
+                    const content = document.createElement('div');
+                    content.className = 'card-content';
+                    const title = document.createElement('p');
+                    title.className = 'title is-6';
+                    title.textContent = art.title;
+                    const artist = document.createElement('p');
+                    artist.className = 'subtitle is-7';
+                    artist.textContent = art.artist;
+                    const price = document.createElement('p');
+                    price.className = 'has-text-weight-semibold';
+                    price.textContent = art.price;
+                    const genre = document.createElement('p');
+                    genre.className = 'tag is-light mt-2';
+                    genre.textContent = art.genre;
+
+                    content.appendChild(title);
+                    content.appendChild(artist);
+                    content.appendChild(price);
+                    content.appendChild(genre);
+
+                    card.appendChild(imgDiv);
+                    card.appendChild(content);
+                    col.appendChild(card);
+                    return col;
+                }
+
+                // Remplir la grille
+                artworks.forEach(a => {
+                    grid.appendChild(createCard(a));
+                });
+            </script>
+        </section>
+
+        <!-- Banner: bref descriptif et mission de la galerie -->
+        <section class="section about-banner">
+            <div class="container">
+                <p class=" title-banner has-text-centered">Notre mission </p>
+                <p class="subtitle has-text-centered">La Galerie du Collectif célèbre la diversité créative — nous exposons des œuvres numériques, photographies et pièces hybrides réalisées par artistes émergents et confirmés.</p>
+                <div class="content has-text-centered">
+                    <p>Notre mission : rendre l'art accessible à tous, soutenir les créateurs locaux et offrir une plateforme où les œuvres dialoguent avec le public. Nous organisons des expositions, soutenons des projets collaboratifs et facilitons la rencontre entre collectionneurs et artistes.</p>
+                    <p class="tagline is-size-7">Galerie du Collectif — Soutenir les artistes, diffuser la création.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer thématique -->
+        <footer class="site-footer themed-footer" role="contentinfo">
+            <div class="container">
+                <div class="columns is-vcentered">
+                    <div class="column">
+                        <p class="has-text-white">© Collectif Créatif — Tous droits réservés</p>
+                    </div>
+                    <div class="column has-text-right">
+                        <div class="social-icons">
+                            <a href="#" class="icon" aria-label="Facebook"><i class="fab fa-facebook fa-lg" style="color:white"></i></a>
+                            <a href="#" class="icon" aria-label="Instagram"><i class="fab fa-instagram fa-lg" style="color:white"></i></a>
+                            <a href="#" class="icon" aria-label="Twitter"><i class="fab fa-twitter fa-lg" style="color:white"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </footer>
     </body>
 </html>

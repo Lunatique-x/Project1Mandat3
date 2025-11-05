@@ -1,0 +1,96 @@
+:root{
+    --card-padding: .75rem;
+}
+
+/* Global dark theme for all pages */
+body {
+    background-color: #090715;  /* Dark background like presentation page */
+    min-height: 100vh;
+}
+
+/* Simple card style shared by index and galerie */
+.simple-art-card .card-image .image img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    display:block;
+}
+
+.simple-art-card .card-content{
+    padding:var(--card-padding);
+    background-color: rgba(50, 48, 48, 0.79);  /* Légèrement transparent */
+}
+
+.simple-art-card .title{
+    margin:0 0 .25rem 0; /* espace sous le titre */
+}
+
+/* Règles plus spécifiques pour éviter d'être écrasé par Bulma ou d'autres CSS */
+.simple-art-card .card-content > .title{
+    display:block;
+    margin-bottom:.35rem !important;
+}
+.simple-art-card .card-content > .subtitle{
+    display:block;
+    margin-top:.15rem !important; /* espace au-dessus du nom de l'artiste */
+    margin-bottom:.5rem !important; /* espace entre artiste et le reste */
+    color: #7a7a7a;
+}
+
+.simple-art-card .price{
+    margin-top:.25rem;
+    color:#222;
+}
+
+.simple-art-card .tag{
+    margin-top:.5rem;
+    display:inline-block;
+}
+
+/* Responsive tweaks for smaller screens */
+@media(max-width:700px){
+    .simple-art-card .card-image .image img{height:250px}
+}
+
+/* Slightly larger images for the gallery to match wider columns */
+#art-grid-gallery .simple-art-card .card-image .image img{
+    height:260px; /* increase height to keep aspect pleasing */
+}
+
+/* Banner and footer styles */
+.about-banner{
+    background: linear-gradient(180deg, rgba(14,18,34,0.95), rgba(10,12,20,0.95));
+    padding: 4rem 0;
+    margin: 4rem 0;
+    color: #ffffff;
+}
+.about-banner .title.is-blue{
+    color: #3e8ed0;  /* match the Bulma is-info blue color */
+}
+.about-banner .subtitle{color: #d6d6d6}
+.about-banner .content p{max-width:900px;margin:0.6rem auto;color:#cfcfcf}
+
+.themed-footer{background:linear-gradient(90deg,#060617,#0b0d1a);padding:2rem 0;color:#fff}
+.themed-footer .social-icons .icon{margin-left:.5rem}
+.themed-footer a.icon:hover{opacity:.85}
+
+.title-banner{ 
+    color: orange;  
+     font-style: italic; 
+     font-size: xx-large; 
+     margin-bottom: 2.5rem;
+}
+/* Tagline inside the banner */
+.about-banner .tagline{
+    color: #bfbfbf;
+    margin-top: .6rem;
+    font-style: italic;
+}
+
+/* Ensure there is a clear gap between the banner and the footer */
+.about-banner{
+    margin-bottom: 2.5rem; /* space below banner */
+}
+.themed-footer{
+    padding-top: 5rem; /* ensure top padding so content doesn't stick to banner */
+}
