@@ -15,12 +15,12 @@
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <a class="navbar-item" href="index.html">
-                    <img src="logo.png" width="112" height="28" alt="Logo">
+                    <img src="logo.jpg" width="112" height="28" alt="Logo">
                 </a>
             </div>
 
             <div class="navbar-menu">
-                <!-- cote gauche  -->
+                <!-- cote gauche --> 
                 <div class="navbar-start">
                     <a class="navbar-item" href="presentation.html">
                         Présentation
@@ -54,7 +54,7 @@
                     <div class="navbar-item">
                         <div class="buttons">
                             <a class="button is-info is-outlined is-hovered" href="login.html">
-                                <strong>Sign up</strong>
+                                <strong>S'inscrire</strong>
                             </a>
                             <a class="button is-white">
                                 <span class="icon">
@@ -67,7 +67,7 @@
             </div>
         </nav>
 
-        <!-- background video section-->
+        <!--  video de l'arriere plan -->
         <section class="hero is-medium is-relative">
             <video autoplay muted loop playsinline id="bg-video">
                 <source src="Video/watermarked-b18ecbd9-313f-4d5f-aae8-abe1976b2440.mp4" type="video/mp4">
@@ -88,10 +88,10 @@
             </div>
         </section>
 
-        <!-- oeuvre mise en avant : grille simplifiée générée par JS -->
+        <!--  grille générée par javascript -->
         <section class="section featured-art">
             <div class="container">
-                <h2 class="title has-text-centered mb-6">Oeuvres mises en avant</h2>
+                <h2 class="title has-text-centered has-text-black mb-6 ">Oeuvres mises en avant</h2>
 
                 <!-- grille vide : remplie par le script ci-dessous -->
                 <div class="columns is-multiline" id="art-grid">
@@ -100,17 +100,16 @@
             </div>
 
             <script>
-                // Liste d'images et métadonnées (remplacer ou compléter selon besoin)
+                // Liste d'images et métadonnées (titres et catégories en français)
                 const artworks = [
-                    {img: 'images/20251029_1354_image.png', title: 'Piece 1354', artist: 'Artiste A', price: '1200$', genre: 'Digital Art'},
-                    {img: 'images/20251029_1354_image (1).png', title: 'Piece 1354 (2)', artist: 'Artiste B', price: '850$', genre: 'Mixed Media'},
-                    {img: 'images/20251029_1355_image.png', title: 'Piece 1355', artist: 'Artiste C', price: '950$', genre: 'Photography'},
-                    {img: 'images/20251029_1356_image.png', title: 'Piece 1356', artist: 'Artiste D', price: '150$', genre: 'Abstrait'},
-                    {img: 'images/20251029_1358_image.png', title: 'Piece 1358', artist: 'Artiste E', price: '400$', genre: 'Illustration'},
-                    {img: 'images/digital-art-style-illustration-fashion-designer.jpg', title: 'Fashion Illustration', artist: 'Designer X', price: '2000$', genre: 'Illustration'},
-                    {img: 'images/fantasy-eye-illustration.jpg', title: 'Fantasy Eye', artist: 'Artiste Y', price: '600$', genre: 'Fantasy'},
-                    {img: 'images/img1.jpg', title: 'Image 1', artist: 'Artiste 1', price: '300$', genre: 'Photo'}
-                    
+                    {img: 'images/20251029_1354_image.png', title: 'Nuit d\'atelier', artist: 'L. Moreau', price: '1 200$', genre: 'Art numérique'},
+                    {img: 'images/20251029_1354_image (1).png', title: 'Rêves hybrides', artist: 'S. Dubois', price: '850$', genre: 'Techniques mixtes'},
+                    {img: 'images/20251029_1355_image.png', title: 'Fugue urbaine', artist: 'A. Laurent', price: '950$', genre: 'Photographie'},
+                    {img: 'images/20251029_1356_image.png', title: 'Couleurs en suspens', artist: 'M. Petit', price: '150$', genre: 'Abstrait'},
+                    {img: 'images/20251029_1358_image.png', title: 'Sérigraphie verte', artist: 'C. Faure', price: '400$', genre: 'Gravure'},
+                    {img: 'images/digital-art-style-illustration-fashion-designer.jpg', title: 'Esquisse de mode', artist: 'N. Dupont', price: '2 000$', genre: 'Illustration'},
+                    {img: 'images/fantasy-eye-illustration.jpg', title: 'L\'œil fantastique', artist: 'E. Rousseau', price: '600$', genre: 'Illustration'},
+                    {img: 'images/img1.jpg', title: 'Paysage blanc', artist: 'V. Bernard', price: '300€', genre: 'Photographie'}
                 ];
 
                 const grid = document.getElementById('art-grid');

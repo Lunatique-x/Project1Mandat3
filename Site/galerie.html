@@ -16,7 +16,7 @@
      <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <a class="navbar-item" href="index.html">
-                    <img src="logo.png" width="112" height="28" alt="Logo">
+                    <img src="logo.jpg" width="112" height="28" alt="Logo">
                 </a>
             </div>
 
@@ -52,7 +52,7 @@
                     <div class="navbar-item">
                         <div class="buttons">
                             <a class="button is-info is-outlined is-hovered" href="login.html">
-                                <strong>Sign up</strong>
+                                <strong>S'inscrire</strong>
                             </a>
                             <a class="button is-white">
                                 <span class="icon">
@@ -77,22 +77,20 @@
                             <!-- Les cards seront insérées ici via JS pour correspondre à index.html -->
                         </div>
                         <script>
-                            // Réutilise (ou remplace) la même liste d'oeuvres que sur index
+                            // Liste d'oeuvres (titres et catégories en français)
                             const artworksGallery = [
-                                {img: 'images/20251029_1354_image.png', title: 'Piece 1354', artist: 'Artiste A', price: '1200$', genre: 'Digital Art'},
-                                {img: 'images/20251029_1354_image (1).png', title: 'Piece 1354 (2)', artist: 'Artiste B', price: '850$', genre: 'Mixed Media'},
-                                {img: 'images/20251029_1355_image.png', title: 'Piece 1355', artist: 'Artiste C', price: '950$', genre: 'Photography'},
-                                {img: 'images/20251029_1356_image.png', title: 'Piece 1356', artist: 'Artiste D', price: '150$', genre: 'Abstrait'},
-                                {img: 'images/20251029_1358_image.png', title: 'Piece 1358', artist: 'Artiste E', price: '400$', genre: 'Illustration'},
-                                {img: 'images/digital-art-style-illustration-fashion-designer.jpg', title: 'Fashion Illustration', artist: 'Designer X', price: '2000$', genre: 'Illustration'},
-                                {img: 'images/fantasy-eye-illustration.jpg', title: 'Fantasy Eye', artist: 'Artiste Y', price: '600$', genre: 'Fantasy'},
-                                {img: 'images/img1.jpg', title: 'Image 1', artist: 'Artiste 1', price: '300$', genre: 'Photo'},
-                                {img: 'images/img2.jpg', title: 'Image 2', artist: 'Artiste 2', price: '320$', genre: 'Photo'},
-                                {img: 'images/img3.jpg', title: 'Image 3', artist: 'Artiste 3', price: '330$', genre: 'Photo'},
-                                {img: 'images/img4.jpg', title: 'Image 4', artist: 'Artiste 4', price: '340$', genre: 'Photo'},
-                                {img: 'images/img5.jpg', title: 'Image 5', artist: 'Artiste 5', price: '350$', genre: 'Photo'},
-                                {img: 'images/nv.jpg', title: 'NV', artist: 'Artiste NV', price: '180$', genre: 'Autre'}
-                               
+                                {img: 'images/20251029_1354_image.png', title: 'Nuit d\'atelier', artist: 'L. Moreau', price: '1 200$', genre: 'Art numérique'},
+                                {img: 'images/20251029_1354_image (1).png', title: 'Rêves hybrides', artist: 'S. Dubois', price: '850$', genre: 'Techniques mixtes'},
+                                {img: 'images/20251029_1355_image.png', title: 'Fugue urbaine', artist: 'A. Laurent', price: '950$', genre: 'Photographie'},
+                                {img: 'images/20251029_1356_image.png', title: 'Couleurs en suspens', artist: 'M. Petit', price: '150$', genre: 'Abstrait'},
+                                {img: 'images/20251029_1358_image.png', title: 'Sérigraphie verte', artist: 'C. Faure', price: '400$', genre: 'Gravure'},
+                                {img: 'images/digital-art-style-illustration-fashion-designer.jpg', title: 'Esquisse de mode', artist: 'N. Dupont', price: '2 000$', genre: 'Illustration'},
+                                {img: 'images/fantasy-eye-illustration.jpg', title: 'L\'œil fantastique', artist: 'E. Rousseau', price: '600$', genre: 'Illustration'},
+                                {img: 'images/img1.jpg', title: 'Paysage blanc', artist: 'V. Bernard', price: '300$', genre: 'Photographie'},
+                                {img: 'images/img2.jpg', title: 'Fragments', artist: 'R. Martin', price: '320$', genre: 'Collage'},
+                                {img: 'images/img3.jpg', title: 'Reflets', artist: 'O. Girard', price: '330$', genre: 'Photographie'},
+                                {img: 'images/img4.jpg', title: 'Matériaux', artist: 'H. Leroy', price: '340$', genre: 'Sculpture'},
+                                {img: 'images/nv.jpg', title: 'Étude nocturne', artist: 'P. Lambert', price: '180$', genre: 'Dessin'}
                             ];
 
                             const galleryGrid = document.getElementById('art-grid-gallery');
@@ -159,8 +157,22 @@
                 </div>
             </div>
         </div>
-        <footer class="site-footer" role="contentinfo">
-         <center><p>© Collectif Créatif — Tous droits réservés</p></center>
+        <!-- footer -->
+        <footer class="site-footer themed-footer" role="contentinfo">
+            <div class="container">
+                <div class="columns is-vcentered">
+                    <div class="column">
+                        <p class="has-text-white">© Collectif Créatif — Tous droits réservés</p>
+                    </div>
+                    <div class="column has-text-right">
+                        <div class="social-icons">
+                            <a href="#" class="icon" aria-label="Facebook"><i class="fab fa-facebook fa-lg" style="color:white"></i></a>
+                            <a href="#" class="icon" aria-label="Instagram"><i class="fab fa-instagram fa-lg" style="color:white"></i></a>
+                            <a href="#" class="icon" aria-label="Twitter"><i class="fab fa-twitter fa-lg" style="color:white"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </footer>
         <script src="req.js"></script>
     </body>
