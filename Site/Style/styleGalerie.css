@@ -1,4 +1,4 @@
-<<<<<<< HEAD:Site/style.css
+
 .container1 {
     width: 70%;
     display: flex;
@@ -14,7 +14,7 @@
 }
 
 .textpresentation {
-    background-color: rgba(31, 31, 31, 0.459);
+    background-color:rgba(50, 48, 48, 0.79);
     border-radius: 8px;
     padding: 10px;
     height: 100px;
@@ -22,7 +22,7 @@
     align-self: center;
 }
 
-=======
+
 :root{
     --bg:#0f1724;
     --card:#0f1724;
@@ -75,7 +75,7 @@ body{
 .site-main{background-color: #090715;}
 .gallery-grid{display:grid;grid-template-columns:repeat(3,2fr);gap:var(--gap);margin:1.5rem 0;padding:0;list-style:none;}
 .gallery-section.wrap{background-color: #090715;}
-.card{background:linear-gradient(180deg,rgba(0, 0, 0, 0.01),rgba(0, 0, 0, 0.01));padding:0;border-radius:var(--radius);overflow:hidden;box-shadow:0 8px 30px rgba(0, 0, 0, 0.1);display:flex;flex-direction:column;}
+.card{background:linear-gradient(180deg,rgba(50, 48, 48, 0.79),rgba(0, 0, 0, 0.01));padding:0;border-radius:var(--radius);overflow:hidden;box-shadow:0 8px 30px rgba(0, 0, 0, 0.1);display:flex;flex-direction:column;}
 .card img{display:block;width: 500px;;height:200px;object-fit:cover;position:relative;transition:transform .35s ease,filter .35s ease;}
 .card .thumb-btn{display:block;border:0;background:none;padding:0;cursor:pointer;width:80%}
 .card figcaption{padding:.6rem .75rem;color:var(--muted);font-size: 20px;}
@@ -112,5 +112,5 @@ a:focus,button:focus{box-shadow:var(--focus);outline:none}
     .gallery-grid{grid-template-columns:repeat(1,1fr)}
     .card img{height:200px}
 }
->>>>>>> 58f6bc5fc2dbcd69edd0b527f8a9ffeb24d226fc:Site/Style/styleGalerie.css
+
 

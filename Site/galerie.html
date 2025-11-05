@@ -72,52 +72,75 @@
                  </section>
 
                  <section class="gallery-section wrap" aria-labelledby="gallery-heading">
-                        <ul class="gallery-grid" role="list">
-                            <li>
-                                <article class="card">
-                                    <button class="thumb-btn" data-index="0" aria-labelledby="cap-0">
-                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQog3RmsUJReAnFVYi7a10DHxxoOJN136q00Q&s" alt="Photographie urbanistique en noir et blanc" loading="lazy" data-description="L’œuvre représente une forêt dense, traversée par de hauts troncs sombres qui s’élèvent vers le ciel. Au loin, un soleil rougeoyant semble se coucher, inondant la scène de lueurs violettes, rouges et orangées. Les arbres, comme des silhouettes, se découpent sur ce fond flamboyant. Le ciel est tourmenté, rempli de formes nuageuses ondulantes, créant une impression de mouvement et de mystère. Les couleurs dominantes sont le violet, le rouge et le jaune, donnant à la scène une atmosphère à la fois dramatique et poétique.">
-                                    
-                                    <figcaption id="cap-0">« Crépuscule dans la forêt pourpre » - 2022</figcaption>   
-                                </article>
-                            </li>
+                        <div class="columns is-multiline" id="art-grid-gallery">
+                            <!-- Les cards seront insérées ici via JS pour correspondre à index.html -->
+                        </div>
+                        <script>
+                            // Réutilise (ou remplace) la même liste d'oeuvres que sur index
+                            const artworksGallery = [
+                                {img: 'images/20251029_1354_image.png', title: 'Piece 1354', artist: 'Artiste A', price: '1200$', genre: 'Digital Art'},
+                                {img: 'images/20251029_1354_image (1).png', title: 'Piece 1354 (2)', artist: 'Artiste B', price: '850$', genre: 'Mixed Media'},
+                                {img: 'images/20251029_1355_image.png', title: 'Piece 1355', artist: 'Artiste C', price: '950$', genre: 'Photography'},
+                                {img: 'images/20251029_1356_image.png', title: 'Piece 1356', artist: 'Artiste D', price: '150$', genre: 'Abstrait'},
+                                {img: 'images/20251029_1358_image.png', title: 'Piece 1358', artist: 'Artiste E', price: '400$', genre: 'Illustration'},
+                                {img: 'images/digital-art-style-illustration-fashion-designer.jpg', title: 'Fashion Illustration', artist: 'Designer X', price: '2000$', genre: 'Illustration'},
+                                {img: 'images/fantasy-eye-illustration.jpg', title: 'Fantasy Eye', artist: 'Artiste Y', price: '600$', genre: 'Fantasy'},
+                                {img: 'images/img1.jpg', title: 'Image 1', artist: 'Artiste 1', price: '300$', genre: 'Photo'},
+                                {img: 'images/img2.jpg', title: 'Image 2', artist: 'Artiste 2', price: '320$', genre: 'Photo'},
+                                {img: 'images/img3.jpg', title: 'Image 3', artist: 'Artiste 3', price: '330$', genre: 'Photo'},
+                                {img: 'images/img4.jpg', title: 'Image 4', artist: 'Artiste 4', price: '340$', genre: 'Photo'},
+                                {img: 'images/img5.jpg', title: 'Image 5', artist: 'Artiste 5', price: '350$', genre: 'Photo'},
+                                {img: 'images/nv.jpg', title: 'NV', artist: 'Artiste NV', price: '180$', genre: 'Autre'}
+                               
+                            ];
 
-                            <li>
-                                <article class="card">
-                                    <button class="thumb-btn" data-index="1" aria-labelledby="cap-1">
-                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvhCEbDavmaXI54L6ip7fxE6f3oe0VIkwgiKAU2LiGk8DF5t0QK5wYDIJwnxa7RQzubXo&usqp=CAU" alt="Composition d'images numériques colorées" loading="lazy" data-description="« Le Banquet des Dieux » montre une réunion de divinités dans les nuages, baignées d’une lumière dorée. Les personnages, élégants et souriants, semblent célébrer l’amour et la beauté dans une ambiance joyeuse. Les couleurs douces, les formes arrondies et la lumière chaude donnent au tableau une atmosphère raffinée et légère, typique du style rococo. L’œuvre exprime une vision idéalisée du monde divin, pleine de grâce, d’harmonie et de plaisir.">
+                            const galleryGrid = document.getElementById('art-grid-gallery');
 
-                                    <figcaption id="cap-1">« Le Banquet des Dieux » - 2024</figcaption>
-                                </article>
-                            </li>
+                            function createCardForGallery(art){
+                                const col = document.createElement('div');
+                                // Use is-4 so each card is wider (approx 33% width) on desktop
+                                col.className = 'column is-4';
+                                const card = document.createElement('div');
+                                card.className = 'card simple-art-card';
 
-                            <li>
-                                <article class="card">
-                                    <button class="thumb-btn" data-index="2" aria-labelledby="cap-2">
-                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6YZfFcn_zAgYbjcvKJKPtVGLTsmOV0KFGSA&s" alt="Formes géométriques abstraites" loading="lazy" data-description="« Reflets du crépuscule » représente un paysage paisible au moment du coucher du soleil.Le ciel se teinte de violet, de rose et d’orange, et ces couleurs se reflètent dans l’eau tranquille d’un lac.Les arbres sombres se découpent sur la lumière du soir, créant un contraste entre ombre et éclat.L’ensemble dégage une atmosphère calme, poétique et rêveuse, invitant à la contemplation et à la sérénité.">
-                                    
-                                    <figcaption id="cap-2">« Reflets du crépuscule » - 2023</figcaption>
-                                </article>
-                            </li>
+                                const imgDiv = document.createElement('div');
+                                imgDiv.className = 'card-image';
+                                const figure = document.createElement('figure');
+                                figure.className = 'image is-4by3';
+                                const img = document.createElement('img');
+                                img.src = art.img;
+                                img.alt = art.title || '';
+                                figure.appendChild(img);
+                                imgDiv.appendChild(figure);
 
-                            <li>
-                                <article class="card">
-                                    <button class="thumb-btn" data-index="3" aria-labelledby="cap-3">
-                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJciKFpwyPqdxCYuiLXFPxx6u6BUbuO3M0-w&s" alt="Peinture abstraite aux tons chauds" loading="lazy" data-description="« L’Ascension des Dieux » montre un vaste ciel baigné de lumière où des divinités et des anges s’élèvent parmi les nuages.Les couleurs douces et dorées donnent une impression de mouvement et de grandeur.L’artiste cherche à représenter le monde céleste comme un lieu de beauté, d’harmonie et de gloire divine.L’ensemble exprime la légèreté, la spiritualité et la splendeur du ciel, typiques du style baroque ou rococo.">
-                                    
-                                    <figcaption id="cap-3">« L’Ascension des Dieux » - 2025</figcaption>
-                                </article>
-                            </li>
+                                const content = document.createElement('div');
+                                content.className = 'card-content';
+                                const title = document.createElement('p');
+                                title.className = 'title is-6';
+                                title.textContent = art.title;
+                                const artist = document.createElement('p');
+                                artist.className = 'subtitle is-7';
+                                artist.textContent = art.artist;
+                                const price = document.createElement('p');
+                                price.className = 'price';
+                                price.textContent = art.price;
+                                const genre = document.createElement('p');
+                                genre.className = 'tag is-light';
+                                genre.textContent = art.genre;
 
-                            <li>
-                                <article class="card">
-                                    <button class="thumb-btn" data-index="4" aria-labelledby="cap-4">
-                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFnd2Ej5LDhs2EVkz-LZqKXxekhZ2cz6W9AA&s" alt="Illustration d'un œil fantastique" loading="lazy" data-description="« Éclat de coquelicots » est une œuvre abstraite où des fleurs rouges semblent jaillir dans un tourbillon d’énergie.Les couleurs vives — rouge, beige et vert doux — créent un fort contraste entre passion et douceur.Les traits dynamiques donnent une impression de mouvement et de vie.L’artiste cherche à exprimer la vitalité de la nature et la beauté fragile des fleurs à travers une explosion de lumière et de couleur.">
-                                    
-                                    <figcaption id="cap-4">« Éclat de coquelicots » - 2021</figcaption>
-                                </article>
-                            </li>
-                        </ul>
+                                content.appendChild(title);
+                                content.appendChild(artist);
+                                content.appendChild(price);
+                                content.appendChild(genre);
+
+                                card.appendChild(imgDiv);
+                                card.appendChild(content);
+                                col.appendChild(card);
+                                return col;
+                            }
+
+                            artworksGallery.forEach(a => galleryGrid.appendChild(createCardForGallery(a)));
+                        </script>
                  </section>
         </main>
 
