@@ -78,10 +78,11 @@
                     <div class="animate-text-container">
                         <h1 class="title has-text-white is-size-2 animate-up">Là où l'art prend vie.</h1>
                         <button class="button is-primary is-medium mt-6 is-rounded animate-up" style="animation-delay: 0.5s;background-color: orange">
-                            <span>Explore</span>
+                           
                             <span class="icon">
                                 <i class="fas fa-arrow-right"></i>
-                            </span>
+                            </span> 
+                            <a href="galerie.html">Explore</a>
                         </button>
                     </div>
                 </div>
@@ -93,14 +94,14 @@
             <div class="container">
                 <h2 class="title has-text-centered has-text-black mb-6 ">Oeuvres mises en avant</h2>
 
-                <!-- grille vide : remplie par le script ci-dessous -->
+                <!-- grille vide  -->
                 <div class="columns is-multiline" id="art-grid">
-                    <!-- Les cards seront insérées ici par JS -->
+                    <!-- les cards vont etre  insérés ici -->
                 </div>
             </div>
 
             <script>
-                // Liste d'images et métadonnées (titres et catégories en français)
+                // la liste d'images 
                 const artworks = [
                     {img: 'images/20251029_1354_image.png', title: 'Nuit d\'atelier', artist: 'L. Moreau', price: '1 200$', genre: 'Art numérique'},
                     {img: 'images/20251029_1354_image (1).png', title: 'Rêves hybrides', artist: 'S. Dubois', price: '850$', genre: 'Techniques mixtes'},
@@ -157,14 +158,14 @@
                     return col;
                 }
 
-                // Remplir la grille
+                // remplir la grille
                 artworks.forEach(a => {
                     grid.appendChild(createCard(a));
                 });
             </script>
         </section>
 
-        <!-- Banner: bref descriptif et mission de la galerie -->
+        <!--  bref descriptif et mission de la galerie -->
         <section class="section about-banner">
             <div class="container">
                 <p class=" title-banner has-text-centered">Notre mission </p>
@@ -176,7 +177,7 @@
             </div>
         </section>
 
-        <!-- Footer thématique -->
+        <!-- footer -->
         <footer class="site-footer themed-footer" role="contentinfo">
             <div class="container">
                 <div class="columns is-vcentered">
