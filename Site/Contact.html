@@ -14,7 +14,7 @@
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <a class="navbar-item" href="index.html">
-                    <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" alt="Logo">
+                    <img src="logo.png" width="112" height="28" alt="Logo">
                 </a>
             </div>
 
@@ -74,10 +74,12 @@
 
     <!-- Bulle à gauche -->
     <div class="bubble-left">
+
       <img src="images/Contact/patient.png" alt="client">
+
     </div>
-    
-        <form class="has-background-info">
+     <!-- Creation de forms -->
+        <form id="contactForm" class="has-background-info">
               <div class="field " >
             <label class="label">Nom complet</label>
             <div class="control has-icons-left has-icons-right">
@@ -85,9 +87,7 @@
                 <span class="icon is-small is-left">
                     <i class="fas fa-user"></i>
                 </span>
-                <span class="icon is-small is-right">
-                    <i class="fas fa-check"></i>
-                </span>
+               
             </div>
         </div>
 
@@ -102,22 +102,20 @@
                     <i class="fas fa-exclamation-triangle"></i>
                 </span>
             </div>
-            <p class="help is-danger">Le courriel est invalide</p>
+            <p  id="emailHelp" class="help is-danger">Le courriel est invalide</p>
         </div>
 
         <div class="field">
             <label class="label">Téléphone</label>
             <div class="control has-icons-left has-icons-right">
-                <input id="tel" class="input" type="tel" placeholder="xxx-xxx-xxxx" required   maxlength="10" pattern="\d{10}">
+                <input id="tel" class="input" type="tel" placeholder="xxx-xxx-xxxx" required   maxlength="14"   pattern="\(\d{3}\)\s\d{3}-\d{4}">
            
                 <span class="icon is-small is-left">
                     <i class="fas fa-phone"></i>
                 </span>
-                <span class="icon is-small is-right">
-                    <i class="fas fa-check"></i>
-                </span>
+               
             </div>
-            <p class="help is-danger">Le numéro de téléphone est invalide</p>
+         
         </div>
 
         <div class="field">
@@ -127,6 +125,9 @@
                     <select>
                         <option>Question</option>
                         <option>Suggestion</option>
+                        <option >Demande</option>
+                        <option >Opinion</option>
+                        <option >Sécurité</option>
                     </select>
                 </div>
             </div>
@@ -153,7 +154,9 @@
 
     <!-- Bulle à droite -->
     <div class="bubble-right">
+
       <img src="images/Contact/Telephone.png" alt="imageTel">
+
     </div>
 
   </div>
@@ -190,3 +193,4 @@
 </body> 
 <h2>hello</h2>
 </html>
+
