@@ -74,10 +74,10 @@
 
                  <section class="gallery-section wrap" aria-labelledby="gallery-heading">
                         <div class="columns is-multiline" id="art-grid-gallery">
-                            <!-- Les cards seront insérées ici via JS pour correspondre à index.html -->
+                            <!-- Les cards seront insérées ici via js -->
                         </div>
                         <script>
-                            // Liste d'oeuvres (titres et catégories en français)
+                            // Liste d'oeuvres 
                             const artworksGallery = [
                                 {img: 'images/20251029_1354_image.png', title: 'Nuit d\'atelier', artist: 'L. Moreau', price: '1 200$', genre: 'Art numérique'},
                                 {img: 'images/20251029_1354_image (1).png', title: 'Rêves hybrides', artist: 'S. Dubois', price: '850$', genre: 'Techniques mixtes'},
@@ -97,7 +97,7 @@
 
                             function createCardForGallery(art){
                                 const col = document.createElement('div');
-                                // Use is-4 so each card is wider (approx 33% width) on desktop
+                                
                                 col.className = 'column is-4';
                                 const card = document.createElement('div');
                                 card.className = 'card simple-art-card';
