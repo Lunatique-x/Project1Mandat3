@@ -1,49 +1,47 @@
-const form = document.querySelector("form");
-const nameInput = document.getElementById("name");
-const emailInput = document.getElementById("email");
-const messageInput = document.getElementById("message");
-
-
-// Message dynamique
-const feedback = document.createElement("p");
-form.appendChild(feedback);
-
-
-
-// Validation et envoi simulé
-form.addEventListener("submit", function(e) {
-    e.preventDefault(); // empêche le rechargement
-
-    const name = nameInput.value.trim();
-    const email = emailInput.value.trim();
-    const message = messageInput.value.trim();
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    // Validation
-    if (name === "" || email === "" || message === "") {
-        feedback.textContent = "Tous les champs sont obligatoires.";
-        feedback.style.color = "red";
-        return;
-    }
-
-    if (!emailRegex.test(email)) {
-        feedback.textContent = "L'email n'est pas valide.";
-        feedback.style.color = "red";
-        return;
-    }
-
-    if (message.length < 10) {
-        feedback.textContent = "Le message doit contenir au moins 10 caractères.";
-        feedback.style.color = "red";
-        return;
-    }
-
-    // Si tout est bon
-    feedback.textContent = "Merci pour votre message !";
-    feedback.style.color = "green";
-
-    form.reset();
-    counter.textContent = "0 caractères";
+// Quand le formulaire est soumis
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Empêche l'envoi réel du formulaire
+    alert(" Votre message a été envoyé avec succès !");
+    // Optionnel : réinitialiser le formulaire après l'alerte
+    this.reset();
 });
 
+// ---- Formatage automatique du numéro de téléphone ----
+const telInput = document.getElementById("tel");
+
+telInput.addEventListener("input", function(e) {
+    // Supprime tout sauf les chiffres
+    let input = e.target.value.replace(/\D/g, "");
+
+    // Limite à 10 chiffres max
+    if (input.length > 10) input = input.substring(0, 10);
+
+    // Formate en (xxx) xxx-xxxx
+    if (input.length > 6) {
+        e.target.value = `(${input.substring(0, 3)}) ${input.substring(3, 6)}-${input.substring(6)}`;
+    } else if (input.length > 3) {
+        e.target.value = `(${input.substring(0, 3)}) ${input.substring(3)}`;
+    } else if (input.length > 0) {
+        e.target.value = `(${input}`;
+    }
+});
+
+
+// ---- Validation du courriel ----
+const courrielInput = document.getElementById("email");
+const courrielHelp = document.getElementById("emailHelp");
+
+courrielInput.addEventListener("input", function () {
+  const courriel = courrielInput.value.trim();
+  const regexCourriel = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (regexCourriel.test(courriel)) {
+    // Le courriel est valide → on enlève les erreurs
+    courrielInput.classList.remove("is-danger");
+    courrielHelp.textContent = "";
+  } else {
+    // Le courriel est invalide → on affiche le message d’erreur
+    courrielInput.classList.add("is-danger");
+    courrielHelp.textContent = "Le courriel est invalide";
+  }
+});

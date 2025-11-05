@@ -1,3 +1,4 @@
+
 body {
   background-color: black;
   color: white; 
@@ -44,7 +45,7 @@ form {
   box-shadow: 0 0 15px #00d1b2;
   animation: neonPulse 2s infinite alternate;
 }
-
+/* animation néon pulsante pour le formulaire */
 @keyframes neonPulse {
   0% { box-shadow: 0 0 10px #00d1b2, 0 0 20px #00d1b2; }
   100% { box-shadow: 0 0 25px #00d1b2, 0 0 50px #00d1b2; }
@@ -73,7 +74,7 @@ form {
   top: 40px;
   border-left-color: #00d1b2;
 }
-
+/* image de la bulle droite avec ajustements */
 .bubble-right img {
   filter: brightness(125%) contrast(100%);
   background-color: white;
@@ -81,19 +82,21 @@ form {
   padding: 5px;
 }
 
+contaact.css
 
-
+/* icônes des réseaux sociaux */
 .social-icons a {
   margin: 0 10px;
   color: #00d1b2;
   font-size: 28px;
   transition: 0.3s;
 }
+/* effet hover sur les icônes */
 .social-icons a:hover {
   color: #fff;
   transform: scale(1.2);
 }
-
+/* deuxième animation néon pour le texte et icônes */
 @keyframes neonPulse {
   0% {
     text-shadow: 0 0 5px #00d1b2, 0 0 10px #00d1b2;
@@ -105,14 +108,15 @@ form {
     text-shadow: 0 0 5px #00d1b2, 0 0 10px #00d1b2;
   }
 }
-
+/* style des liens dans le footer */
 .footer a {
   color: #00d1b2;
   animation: neonPulse 1.5s infinite;
    margin: 0 10px;
 }
 
-
+/* taille du texte "Suivez-nous :" dans le footer */
 footer span.has-text-white {
     font-size: 14px;
 }
+
